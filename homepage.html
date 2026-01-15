@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sports Sense</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #2980b9, #6dd5fa);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons a {
+      text-decoration: none;
+      padding: 12px 24px;
+      margin: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .start-btn {
+      background-color: #e67e22;
+      color: white;
+    }
+
+    .learn-btn {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+      color: #2c3e50;
+    }
+
+    .sports-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .sport-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .sport-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .sport-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .sport-card .content {
+      padding: 15px;
+    }
+
+    .sport-card h3 {
+      margin: 10px 0 5px;
+      color: #2980b9;
+    }
+
+    .faq {
+      margin-top: 40px;
+    }
+
+    .faq-item {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+
+    .faq-item h4 {
+      margin: 0;
+      color: #2c3e50;
+    }
+
+    .faq-answer {
+      display: none;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sports Sense</h1>
+    <p>Your Personal AI Sports Coach — Learn any sport, anytime, anywhere.</p>
+    <div class="hero-buttons">
+      <a href="#" class="start-btn">Start Your Sports Journey</a>
+      <a href="#" class="learn-btn">Learn More</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>Choose Your Sport</h2>
+    <div class="sports-grid">
+      <a href="#" class="sport-card">
+        <img src="https://images.vexels.com/media/users/3/289093/isolated/preview/e99c8368cd72425c327416e0d6022c67-cute-snowboarding-character.png" alt="Snowboarding">
+        <div class="content">
+          <h3>Snowboarding</h3>
+          <p>Master the slopes with balance, gear tips, and beginner moves.</p>
+        </div>
+      </a>
+      <a href="baseball.html" class="sport-card">
+        <img src="https://static.vecteezy.com/system/resources/previews/002/084/294/original/cute-baseball-player-character-mascot-design-free-vector.jpg" alt="Baseball">
+        <div class="content">
+          <h3>Baseball</h3>
+          <p>Learn batting, pitching, and field positions with simple rules.</p>
+        </div>
+      </a>
+      <a href="#" class="sport-card">
+        <img src="https://img.freepik.com/premium-vector/cute-boy-playing-soccer-cartoon-character_1057-93661.jpg?w=2000" alt="Soccer">
+        <div class="content">
+          <h3>Soccer</h3>
+          <p>Kick off with dribbling, passing, and goal-scoring basics.</p>
+        </div>
+      </a>
+      <a href="#" class="sport-card">
+        <img src="https://img.freepik.com/premium-photo/cute-chibi-girl-mascot-playing-badminton-with-shuttlecock-white-background_1163492-621.jpg?w=2000" alt="Badminton">
+        <div class="content">
+          <h3>Badminton</h3>
+          <p>Serve, smash, and rally with lightweight gear and fast footwork.</p>
+        </div>
+      </a>
+      <a href="#" class="sport-card">
+        <img src="https://img.freepik.com/premium-vector/cute-basketball-player-cartoon-isolated-vector-illustration_773815-179.jpg" alt="Basketball">
+        <div class="content">
+          <h3>Basketball</h3>
+          <p>Learn shooting, dribbling, and team play on the court.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item" onclick="toggleFAQ(this)">
+      <h4>How does the AI coach help me learn?</h4>
+      <div class="faq-answer">It gives instant, beginner-friendly guidance on rules, techniques, equipment, and safety tips for each sport.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFAQ(this)">
+      <h4>Do I need any prior experience?</h4>
+      <div class="faq-answer">Nope! The AI is designed for complete beginners and casual learners.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFAQ(this)">
+      <h4>Can I ask specific questions like “How to serve in badminton”?</h4>
+      <div class="faq-answer">Yes! You can ask anything and get tailored advice instantly.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFAQ(this)">
+      <h4>Is this available 24/7?</h4>
+      <div class="faq-answer">Absolutely. You can learn anytime, anywhere—no coach or senior needed.</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Sports Sense | Built for Students</p>
+  </footer>
+
+  <script>
+    function toggleFAQ(item) {
+      const answer = item.querySelector('.faq-answer');
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
